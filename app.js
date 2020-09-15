@@ -18,11 +18,11 @@ console.log(filePath)
 app.use(express.static(mainDirectoryPath))
 
 
-app.get('',(req,res)=>{
+// app.get('',(req,res)=>{
     
-   res.send("hello")
+//    res.send("hello")
 
-})
+// })
 
 
 
