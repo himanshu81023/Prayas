@@ -78,7 +78,7 @@ ul{
 .visit{
 	border-style: outlet;
 	color: black;
-	background: red;
+	background: #b3b3b3;
 	border-radius: 5px;
-
+	margin-left: 8%;
 } 

@@ -27,6 +27,10 @@ header button{
 	margin-right: 1.2%;
 	float: right;
 }
+nav{
+	width: 100%;
+	margin-left: 5%;
+}
 nav a{
 	text-decoration: none;
 	background: #ffffff;
@@ -48,9 +52,10 @@ nav a:active{
 	color: #4c2cd0;
 }
 nav i{
-	padding-right: 5%;
+	padding-right: 25%;
+	padding-left: 25%;
 	color: #16f013;
-	/*display: block;*/
+	display: block;
 }
 div{
 	width: 30%;
