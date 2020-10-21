@@ -29,6 +29,29 @@ header button{
 }
 nav{
 	width: 100%;
+	margin-left: 8%;
+}
+nav a{
+	text-decoration: none;
+	background: #ffffff;
+	color: #000000;
+	width: 24%;
+	height: 20%;
+	text-align: center;
+	display: inline-block;
+	margin: 2%;
+	padding: 0.5% 0.7% 0.2% 0.7%;
+	border-radius: 8%;
+}
+nav i{
+	padding-right: 30%;
+	padding-left: 30%;
+	color: #16f013;
+	display: block;
+}
+@media screen and (min-width: 770px){
+nav{
+	width: 100%;
 	margin-left: 5%;
 }
 nav a{
@@ -40,8 +63,15 @@ nav a{
 	text-align: center;
 	display: inline-block;
 	margin: 2%;
-	padding: 1% 0.7%;
+	padding: 0.5% 0.7% 0.2% 0.7%;
 	border-radius: 8%;
+}
+nav i{
+	padding-right: 25%;
+	padding-left: 25%;
+	color: #16f013;
+	display: block;
+}
 }
 nav a:hover{
 	color: #5604f7;
@@ -50,12 +80,6 @@ nav a:hover{
 nav a:active{
 	background: #b3b3b3;
 	color: #4c2cd0;
-}
-nav i{
-	padding-right: 25%;
-	padding-left: 25%;
-	color: #16f013;
-	display: block;
 }
 div{
 	width: 30%;
