@@ -1,5 +1,4 @@
 const express =  require('express')
-require('./app_api.js') 
 require('./src/db/mongodb')
 //const userRouter = require('./src/routers/users.js')
 const doctorsRouter = require('./src/routers/doctors')
