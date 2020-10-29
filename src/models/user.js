@@ -52,7 +52,7 @@ tokens:[{
     //console.log("hi")
      const user = this
     
-     const token = jwt.sign({_id:user._id.toString()},"heyicannowmakethis")
+     const token = jwt.sign({_id:user._id.toString()},process.env.SECRET_STRING)
       user.tokens = user.tokens.concat({ token })
       await user.save()
    

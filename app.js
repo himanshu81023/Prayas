@@ -12,7 +12,7 @@ const app = express()
 
 const dirPath = __dirname
 const filePath = __filename 
-const port = process.env.PORT||2000
+const port = process.env.PORT
 
 const mainDirectoryPath = path.join(__dirname,'./public')
 console.log(mainDirectoryPath)
@@ -38,6 +38,6 @@ app.use(doctorsRouter)
 app.use(usersRouter)
 app.use(patientsRouter)
 app.listen(port,()=>{
-    console.log('server is up on the' + 2000 )
+    console.log('server is up on the' + port )
     
 })

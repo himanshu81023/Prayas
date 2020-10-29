@@ -12,9 +12,12 @@
     "postman-request": "^2.88.1-postman.26",
     "validator": "^13.1.17"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "env-cmd": "^8.0.2"
+  },
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "env-cmd config/dev.env nodemon app.js"
   },
   "author": "",
   "license": "ISC"
