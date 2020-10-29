@@ -12,7 +12,7 @@ const app = express()
 
 const dirPath = __dirname
 const filePath = __filename 
-const port = process.env.PORT||2080
+const port = process.env.PORT||2000
 
 const mainDirectoryPath = path.join(__dirname,'./public')
 console.log(mainDirectoryPath)

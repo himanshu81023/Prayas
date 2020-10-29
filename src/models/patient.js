@@ -42,7 +42,11 @@ doctor:{
 },
 date:{
     type:Date,
-    reqired:false,
+    required:true,
+},
+hospital:{
+    type:String,
+    required:true
 }})
 
 

@@ -23,8 +23,10 @@ signup.addEventListener('submit',(event)=>{
         'Content-Type': 'application/json;charset=utf-8'
          },
          body:JSON.stringify(info)}).then((response)=>{
-         response.json().then((data)=>{
+         response.json().then(async (data) => {
+             //await window.open('/',"_self") // ise hojaye to dekhna
              console.log(data)
-         })
+         }).catch((error)=>{console.log("Unable to signup! Again check out yout credentials")
+        console.log(error)})
     })// fetching only get option
 })
