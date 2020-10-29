@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const url = process.env.SECRET_STRING
+const url = process.env.MONGODB_URL
 mongoose.connect(url,{useNewUrlParser:true,useUnifiedToplogy:true})
 
 // const User2 = mongoose.model('User2',{name:{type:String},
