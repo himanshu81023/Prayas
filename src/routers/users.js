@@ -17,7 +17,7 @@ router.post('/signup',async (req,res)=>{
    }
    // res.send("hi how are you")
 })
-router.post('/login',async (req,res)=>{
+router.post('/log',async (req,res)=>{
     
     
     try {
