@@ -1,12 +1,22 @@
 const button = document.getElementById("login")
 
 button.addEventListener('click',async (event)=>{
+	
 	console.log("hello")
 	event.preventDefault()
 	console.log("hi how are you")
     fetch('/users').then((response)=>{
 		response.json().then((data)=>{
 			console.log(data)
+			console.log(data.error)
+			if(data.error)
+			{
+				location.href = 'login.html'
+			}
+			else
+			{
+				alert("You have already logged in")
+			}
 		})
 	})
 })
