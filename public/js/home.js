@@ -1,3 +1,18 @@
+const button = document.getElementById("login")
+
+button.addEventListener('submit',async (event)=>{
+	console.log("hello")
+	event.preventDefault()
+	console.log("hi how are you")
+    fetch('/users').then((response)=>{
+		response.json().then((data)=>{
+			console.log(data)
+		})
+	})
+})
+ // y upar abhi add kiya hain
+
+
 function currentTime(){
 	var date= new Date();
 	var hour=date.getHours();
