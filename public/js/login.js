@@ -1,7 +1,7 @@
 const login = document.getElementById('login_form')
 console.log("working fine   ")
 
-login.addEventListener('submit',(event)=>{
+login.addEventListener('submit',async (event)=>{
    
     const email = document.getElementById('exampleInputEmail1')
     const password = document.getElementById('exampleInputPassword1')
@@ -18,7 +18,7 @@ login.addEventListener('submit',(event)=>{
          },
          body:JSON.stringify(info)}).then((response)=>{
          response.json().then((data)=>{
-           //await window.open('/',"_self") // ise hojaye to dekhna
+           window.open('/',"_self") // ise hojaye to dekhna
             console.log(data)
          }).catch((e)=>{
             console.log("unable to login")
