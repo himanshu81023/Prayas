@@ -1,6 +1,6 @@
 const button = document.getElementById("login")
 
-button.addEventListener('submit',async (event)=>{
+button.addEventListener('click',async (event)=>{
 	console.log("hello")
 	event.preventDefault()
 	console.log("hi how are you")
