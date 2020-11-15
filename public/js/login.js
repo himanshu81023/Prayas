@@ -20,7 +20,7 @@ login.addEventListener('submit',(event)=>{
          response.json().then((data)=>{
            //await window.open('/',"_self") // ise hojaye to dekhna
             console.log(data)
-         }).cathc((e)=>{
+         }).catch((e)=>{
             console.log("unable to login")
              console.log(error)
          })
