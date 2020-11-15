@@ -18,8 +18,9 @@ login.addEventListener('submit',async (event)=>{
          },
          body:JSON.stringify(info)}).then((response)=>{
          response.json().then((data)=>{
-           window.open('/',"_self") // ise hojaye to dekhna
-            console.log(data)
+        //    window.open('/',"_self") // ise hojaye to dekhna
+        window.location.replace('/')   
+        console.log(data)
          }).catch((e)=>{
             console.log("unable to login")
              console.log(error)
