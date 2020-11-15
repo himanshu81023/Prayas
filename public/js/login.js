@@ -21,6 +21,7 @@ login.addEventListener('submit',async (event)=>{
         //    window.open('/',"_self") // ise hojaye to dekhna
         window.location.replace('/')   
         console.log(data)
+        alert("YOU ARE LOGGED IN")
          }).catch((e)=>{
             console.log("unable to login")
              console.log(error)
