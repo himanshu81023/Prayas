@@ -26,6 +26,7 @@ signup.addEventListener('submit',(event)=>{
          response.json().then(async (data) => {
              //await window.open('/',"_self") // ise hojaye to dekhna
              console.log(data)
+             localStorage.setItem("Token",data.token)
          }).catch((error)=>{console.log("Unable to signup! Again check out yout credentials")
         console.log(error)})
     })// fetching only get option

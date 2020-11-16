@@ -46,7 +46,13 @@ tokens:[{
 //     delete user.password;
 //     return user
 //  }
-
+userschema.methods.toJSON = function (){
+    user = this
+    userObject = user.toObject()
+    delete userObject.password
+    delete userObject.token
+    return userObject
+}
  
  userschema.methods.generateAuthToken = async function () {
     //console.log("hi")
