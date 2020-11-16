@@ -1,8 +1,8 @@
 
 //const login = document.querySelector('login_form')
 const signup = document.getElementById('signup_form')
-
-
+// checking wether i acna access token from here or not
+console.log(localStorage.getItem("Token"))
 console.log(" this is also happening ")
 
 
