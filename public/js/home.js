@@ -2,10 +2,21 @@ const button = document.getElementById("login")
 
 button.addEventListener('click',async (event)=>{
 	
-	console.log("hello")
+	
 	event.preventDefault()
+	const info = {
+		email: 'complicatedstoryag@gmail.com',
+		password:'81023m@@'
+	}
 	console.log("hi how are you")
-    fetch('/users').then((response)=>{
+    fetch('/users',{
+		method:'POST',
+		headers: {
+			'Content-Type': 'application/json;charset=utf-8',
+			'authorization': localStorage.getItem("Token")
+			 },
+			 body:JSON.stringify(info)
+	}).then((response)=>{
 		response.json().then((data)=>{
 			console.log(data)
 			console.log(data.error)
