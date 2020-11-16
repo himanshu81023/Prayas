@@ -4,19 +4,8 @@ button.addEventListener('click',async (event)=>{
 	
 	console.log("hello")
 	event.preventDefault()
-	const info = {
-        email: 'complicatedstoryag@gmail.com',
-        password:'81023m@@'
-    }
 	console.log("hi how are you")
-    fetch('/users',{
-		method='GET',
-		headers:{
-		  authorization:localStorage.getItem('Token')
-		},
-		body:JSON.stringify(info),
-		
-	}).then((response)=>{
+    fetch('/users').then((response)=>{
 		response.json().then((data)=>{
 			console.log(data)
 			console.log(data.error)
