@@ -41,7 +41,7 @@ router.post('/logout',auth,async(req,res)=>{
             return (token.token !== req.token)
        })
         await req.user.save()
-        res.send("You are logged out")
+        res.send({logout:"You are logged out"})
     }catch(e){
         req.status(500).send("please authenticate first")
     }

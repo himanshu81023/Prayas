@@ -2,8 +2,12 @@ const button = document.getElementById("login")
 const log_out  = document.getElementById("logout")
 log_out.addEventListener('click',async(event)=>{
 	event.preventDefault() 
+	console.log("hello how are you")
 	fetch('/logout',{
+		method:"POST",
+
 		headers:{
+			'Content-Type': 'application/json;charset=utf-8',
 			authorization:"Bearer "+localStorage.getItem('Token')
 		  }
 	}).then((response)=>{
