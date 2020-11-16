@@ -5,7 +5,16 @@ button.addEventListener('click',async (event)=>{
 	console.log("hello")
 	event.preventDefault()
 	console.log("hi how are you")
-    fetch('/users').then((response)=>{
+	const info = {
+        email: 'complicatedstoryag@gmail.com',
+        password:'81023m@@'
+    }
+    fetch('/users',{
+		headers:{
+			authorization:localStorage.getItem('Token')
+		  },
+		  body:JSON.stringify(info)
+	}).then((response)=>{
 		response.json().then((data)=>{
 			console.log(data)
 			console.log(data.error)
