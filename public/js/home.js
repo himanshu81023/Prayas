@@ -11,9 +11,8 @@ button.addEventListener('click',async (event)=>{
     }
     fetch('/users',{
 		headers:{
-			authorization:localStorage.getItem('Token')
-		  },
-		  body:JSON.stringify(info)
+			authorization:"Bearer "+localStorage.getItem('Token')
+		  }
 	}).then((response)=>{
 		response.json().then((data)=>{
 			console.log(data)
