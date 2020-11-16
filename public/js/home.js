@@ -1,5 +1,28 @@
 const button = document.getElementById("login")
-
+const log_out  = document.getElementById("logout")
+log_out.addEventListener('click',async(event)=>{
+	event.preventDefault() 
+	fetch('/logout',{
+		headers:{
+			authorization:"Bearer "+localStorage.getItem('Token')
+		  }
+	}).then((response)=>{
+		response.json().then((data)=>{
+			console.log(data)
+			console.log(data.error)
+			if(data.error)
+			{
+				alert("you have already logged out")
+				location.href = '/'
+			}
+			else
+			{
+				alert("Logged out")
+                location.href = '/'
+			}
+		})
+	})
+})
 button.addEventListener('click',async (event)=>{
 	
 	console.log("hello")
