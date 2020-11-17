@@ -80,7 +80,7 @@ appointmentForm.addEventListener('submit', async (event) => {
         window.open('/','_self')
       }// console.log("Unable to take appointment! Again check out your credentials")
       // console.log(error)
-    })
+    )
   })// fetching only get 
 
 
