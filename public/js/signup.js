@@ -2,7 +2,7 @@
 //const login = document.querySelector('login_form')
 const signup = document.getElementById('signup_form')
 // checking wether i acna access token from here or not
-console.log(localStorage.getItem("Token"))
+
 console.log(" this is also happening ")
 
 
@@ -24,10 +24,14 @@ signup.addEventListener('submit',(event)=>{
          },
          body:JSON.stringify(info)}).then((response)=>{
          response.json().then(async (data) => {
-             //await window.open('/',"_self") // ise hojaye to dekhna
+             // ise hojaye to dekhna
              console.log(data)
              localStorage.setItem("Token",data.token)
-         }).catch((error)=>{console.log("Unable to signup! Again check out yout credentials")
-        console.log(error)})
-    })// fetching only get option
+             window.open('/',"_self") 
+         }).catch((error)=>{alert("Unable to signup! Again check out your credentials")
+         location.reload()
+         console.log(error)})
+    }).catch((error)=>{alert("Unable to signup! Again check out your credentials")// fetching only get option
+    location.reload()
+    console.log(localStorage.getItem("Token"))
 })
