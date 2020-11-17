@@ -40,7 +40,7 @@ tokens:[{
 //     required:true
 // }
 })
-userSchema.virtual('pat',{
+userschema.virtual('pat',{
     ref:'patient',
     localField:'_id',
     foreignField:'user'
