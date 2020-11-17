@@ -67,6 +67,7 @@ appointmentForm.addEventListener('submit', async (event) => {
     response.json().then(async (data) => {
       if(data.error)
       {
+        location.href('/')
         throw new Error("not logged in")
       }
       //await window.open('/',"_self") // ise hojaye to dekhna
@@ -76,7 +77,7 @@ appointmentForm.addEventListener('submit', async (event) => {
     }).catch((error) => {
       if (t) {
         alert("Unable to take appointment! You are not logged in!")
-        location.href('/')
+        
       }// console.log("Unable to take appointment! Again check out your credentials")
       // console.log(error)
     })
