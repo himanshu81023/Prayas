@@ -57,7 +57,8 @@ appointmentForm.addEventListener('submit',(event)=>{
     //  window.history.go(-1)
     fetch('/patients',{method:'POST',
     headers: {
-    'Content-Type': 'application/json;charset=utf-8'
+    'Content-Type': 'application/json;charset=utf-8',
+     authorization:"Bearer "+localStorage.getItem('Token')
      },
      body:JSON.stringify(info)}).then((response)=>{
      response.json().then(async (data) => {

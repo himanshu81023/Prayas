@@ -1,13 +1,15 @@
 const express = require('express')
-const router = express.Router()
+//const User = require('../models/user')
 const Patient = require('../models/patient')
+const auth = require('../middleware/auth')
+const router = express.Router()
 
 
-router.post('/patients',async(req,res)=>{
+router.post('/patients',auth,async(req,res)=>{
 
    console.log( "pos patient is running ")
    
-    const patient = new Patient(req.body)
+    const patient = new Patient({...req,body,user:req.user._id})
     console.log(patient)
     patient.save().then(()=>{res.send(patient)}).catch((error)=>{
         res.status(400).send(error)
@@ -15,7 +17,7 @@ router.post('/patients',async(req,res)=>{
     // res.send("hi this is me")
 })
 
-router.get('/patients',async(req,res)=>{
+router.get('/patients',auth,async(req,res)=>{
       const patient = await Patient.find({})
       res.send(patient)
 })
