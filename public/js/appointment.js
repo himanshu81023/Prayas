@@ -65,7 +65,7 @@ appointmentForm.addEventListener('submit', async (event) => {
     body: JSON.stringify(info)
   }).then((response) => {
     response.json().then(async (data) => {
-      if (data.error) {
+      if (data.error==":please athenticate") {
         t = false
         alert("You are not logged in.")
         location.href = '/'
