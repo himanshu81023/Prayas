@@ -55,12 +55,12 @@ const patientschema = new mongoose.Schema({
         required: false,
         default: false
     },
-    date: {
+    date_alloted: {
         type: String,
         required: false,
         default :"0-0-0000"
     },
-    time: {
+    Time: {
         type: String,
         required: false,
         default :"0:0 AM"
