@@ -23,7 +23,7 @@ login.addEventListener('submit',async (event)=>{
         console.log(data)
         localStorage.setItem("Token",data.token)
         console.log(localStorage.getItem("Token"))
-        
+        console.log("hi hqo are you")
          }).catch((e)=>{
             console.log("unable to login")
              console.log(error)
