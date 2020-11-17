@@ -54,7 +54,7 @@ appointmentForm.addEventListener('submit', async (event) => {
   }
 
   event.preventDefault()
-  t = true
+  const t = true
   //  window.history.go(-1)
   fetch('/patients', {
     method: 'POST',
