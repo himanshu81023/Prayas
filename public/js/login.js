@@ -19,13 +19,17 @@ login.addEventListener('submit',async (event)=>{
          body:JSON.stringify(info)}).then((response)=>{
          response.json().then((data)=>{
         //    window.open('/',"_self") // ise hojaye to dekhna
-        //window.location.replace('/')   
+        
         console.log(data)
         localStorage.setItem("Token",data.token)
         console.log(localStorage.getItem("Token"))
         console.log("hi hqo are you")
+        alert("YOU ARE LOGGED IN")
+        window.location.replace('/')   
          }).catch((e)=>{
             console.log("unable to login")
+            alert("LOOK LIKE YOU HAVE ENTERED WRONG CREDENTIAL TRY OUT ONES MORE")
+            location.reload()
              console.log(error)
          })
     })// fetching only get option
