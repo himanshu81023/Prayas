@@ -68,7 +68,7 @@ appointmentForm.addEventListener('submit', async (event) => {
       if (data.error) {
         t = false
         alert("You are not logged in.")
-         location.href('/')
+        location.href = '/'
       }
       //await window.open('/',"_self") // ise hojaye to dekhna
       console.log(data)
