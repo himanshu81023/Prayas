@@ -77,7 +77,6 @@ appointmentForm.addEventListener('submit', async (event) => {
     }).catch((error) => {
       if (t) {
         alert("Unable to take appointment! Again check out your credential")
-        location.relaod()
       }// console.log("Unable to take appointment! Again check out your credentials")
       // console.log(error)
     })
