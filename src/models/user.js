@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const validator = require('validator')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
+const patient = require('../models/patient')
 // const brypt = require('bcryptjs')
 const userschema = new mongoose.Schema({name:{
     type:String,
@@ -38,6 +39,11 @@ tokens:[{
 //     type:Number,
 //     required:true
 // }
+})
+userSchema.virtual('pat',{
+    ref:'patient',
+    localField:'_id',
+    foreignField:'user'
 })
 // userSchema.methods.toJSON = function(){
 //     const usr = this;
