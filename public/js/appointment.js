@@ -25,7 +25,7 @@ console.log("this is running")
 //   })// fetching only get option
 // })
 
-appointmentForm.addEventListener('submit', (event) => {
+appointmentForm.addEventListener('submit', async (event) => {
 
   console.log("this event is going on")
   const first_name = document.getElementById('first')
@@ -54,6 +54,7 @@ appointmentForm.addEventListener('submit', (event) => {
   }
 
   event.preventDefault()
+  t = true
   //  window.history.go(-1)
   fetch('/patients', {
     method: 'POST',
@@ -64,19 +65,20 @@ appointmentForm.addEventListener('submit', (event) => {
     body: JSON.stringify(info)
   }).then((response) => {
     response.json().then(async (data) => {
-      if(data.error)
-      {
+      if (data.error) {
+        t = false
         alert("You are not logged in.")
-        location.href('/')
+        await location.href('/')
       }
       //await window.open('/',"_self") // ise hojaye to dekhna
       console.log(data)
       alert("Form  is submitted succesfully! Check Appointment tab for verification!")
       location.href('/')
     }).catch((error) => {
-       alert("Unable to take appointment! Again check out your credential")
-       location.relaod()
-      // console.log("Unable to take appointment! Again check out your credentials")
+      if (t) {
+        alert("Unable to take appointment! Again check out your credential")
+        await location.relaod()
+      }// console.log("Unable to take appointment! Again check out your credentials")
       // console.log(error)
     })
   })// fetching only get 
