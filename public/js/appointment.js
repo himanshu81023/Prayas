@@ -72,8 +72,7 @@ appointmentForm.addEventListener('submit', async (event) => {
       }
       //await window.open('/',"_self") // ise hojaye to dekhna
       console.log(data)
-      alert("Form  is submitted succesfully! Check Appointment tab for verification!")
-      location.href('/')
+      window.open('/','_self')
     }).catch((error) => {
         
         alert("Unable to take appointment! You are not logged in!")
