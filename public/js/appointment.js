@@ -54,7 +54,7 @@ appointmentForm.addEventListener('submit', async (event) => {
   }
 
   event.preventDefault()
-  const t = true
+  
   //  window.history.go(-1)
   fetch('/patients', {
     method: 'POST',
@@ -67,7 +67,7 @@ appointmentForm.addEventListener('submit', async (event) => {
     response.json().then(async (data) => {
       if(data.error)
       {
-        location.href('/')
+        
         throw new Error("not logged in")
       }
       //await window.open('/',"_self") // ise hojaye to dekhna
@@ -75,9 +75,9 @@ appointmentForm.addEventListener('submit', async (event) => {
       alert("Form  is submitted succesfully! Check Appointment tab for verification!")
       location.href('/')
     }).catch((error) => {
-      if (t) {
-        alert("Unable to take appointment! You are not logged in!")
         
+        alert("Unable to take appointment! You are not logged in!")
+        window.open('/','_self')
       }// console.log("Unable to take appointment! Again check out your credentials")
       // console.log(error)
     })
