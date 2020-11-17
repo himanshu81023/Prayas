@@ -65,7 +65,10 @@ appointmentForm.addEventListener('submit', async (event) => {
     body: JSON.stringify(info)
   }).then((response) => {
     response.json().then(async (data) => {
-      
+      if(data.error)
+      {
+        throw new Error("not logged in")
+      }
       //await window.open('/',"_self") // ise hojaye to dekhna
       console.log(data)
       alert("Form  is submitted succesfully! Check Appointment tab for verification!")
