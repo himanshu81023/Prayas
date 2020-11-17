@@ -61,7 +61,7 @@ const patientschema = new mongoose.Schema({
         default :"0-0-0000"
     },
     time: {
-        type: Time,
+        type: String,
         required: false,
         default :"0:0 AM"
     },
