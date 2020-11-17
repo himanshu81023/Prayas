@@ -68,7 +68,7 @@ appointmentForm.addEventListener('submit', async (event) => {
       if (data.error) {
         t = false
         alert("You are not logged in.")
-        await location.href('/')
+         location.href('/')
       }
       //await window.open('/',"_self") // ise hojaye to dekhna
       console.log(data)
@@ -77,7 +77,7 @@ appointmentForm.addEventListener('submit', async (event) => {
     }).catch((error) => {
       if (t) {
         alert("Unable to take appointment! Again check out your credential")
-        await location.relaod()
+        location.relaod()
       }// console.log("Unable to take appointment! Again check out your credentials")
       // console.log(error)
     })
